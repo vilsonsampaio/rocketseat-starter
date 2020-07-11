@@ -1,4 +1,4 @@
-# Desafios Starter - RocketSeat
+# Desafios Starter - Rocketseat
 
 Esse repositório é dedicado aos desafios realizados durante a coleção de cursos gratuitos da [Rocketseat](https://rocketseat.com.br/), o [Starter Cursos](https://app.rocketseat.com.br/journey/starter).
 
