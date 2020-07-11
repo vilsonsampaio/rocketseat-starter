@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M04 - A04 -- Desafio</title>
+</head>
+<body>
+
+  <input type="text" name="user">
+  <button onclick="pesquisaNome()">Adicionar</button>
+
+  <script>
+    function primeiraQuestao() {
+      function checaIdade(idade) {
+        const promessa = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            (idade > 18) ? resolve() : reject();
+          }, 2000);
+        });
+        return promessa;
+      }
+
+      checaIdade(20)
+      .then(
+        function() {
+          console.log("Maior que 18");
+        }
+      )
+      .catch(
+        function() {
+          console.log("Menor que 18");
+        }
+      );
+    }
+    primeiraQuestao();
+
+    function pesquisaNome() {
+      const username = document.querySelector('input[name="user"]').value;
+      const url = `https://api.github.com/users/${username}/repos`;
+
+      fetch(url)
+      .then(r => {
+        if (r.status == 404) {
+          const div = document.createElement('div');
+          div.innerText = "Usuário não encontrado!";
+          div.style = "color: red; font-weight: bold;"
+          document.body.appendChild(div);
+        }
+        return r.json();
+      })
+      .then(r => {
+        const ul = document.createElement('ul');
+        r.forEach(repo => {
+          const li = document.createElement('li');
+          li.innerText = repo.name
+          ul.appendChild(li);
+        });
+
+        document.body.appendChild(ul)
+      })
+      console.log(username);
+    }
+
+  </script>
+</body>
+</html>

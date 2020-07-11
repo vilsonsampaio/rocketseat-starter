@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>M01 - A06 | Condicionais | Curso JavaScript | Starter cursos</title>
+    </head>
+    <body>
+
+        
+        <script>
+
+            
+            /*
+            Operadores de Igualdade:
+                ==: compara apenas o valor, não o tipo ("1"=1)
+                ===: compara o valor juntamente com o tipo ("1"!=1) *optar por ela para igualdade
+
+            Dicas de convenção:
+                '': para Strings internas ao sistema
+                "": pra o que vai ser mostrado ao usuário
+            */
+
+            
+            function retornaSexo(sexo) {   
+                
+                // Vai receber "M" ou "F" por parâmetro
+                // Vai retornar "Masculino" ou "Feminino"
+                
+                // Estrutura if
+                if (sexo === "M") {
+                    return 'Masculino';
+                } else if (sexo === 'F') {
+                    return 'Feminino';
+                } else {
+                    return 'Opção inválida';
+                }
+                
+
+                /*  Estrutura Switch (já trabalha com a comparação de tipo também ()===))
+                switch (sexo) {
+                    case 'M':
+                        return 'Masculino';
+                    case 'F': 
+                        return 'Feminino';
+                    default: 
+                        return 'Opção inválida';
+                }
+                */
+                
+            }
+
+            var resultado = retornaSexo('M');
+            console.log(resultado);
+
+
+
+        </script>
+    </body>
+</html>

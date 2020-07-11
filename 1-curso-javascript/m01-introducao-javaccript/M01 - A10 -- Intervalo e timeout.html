@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>M01 - A10 | Intervalo e timeout | Curso JavaScript | Starter cursos</title>
+    </head>
+    <body>
+
+        
+        <script>
+            
+            // Um intervalo é uma função que executa várias vezes dentro de um intervalo
+
+            function exibeIntervalo(){
+                console.log('Eu vou executar várias vezes de 1 em 1 segundo');
+            }
+
+            setInterval(exibeIntervalo, 1000); 
+            // A cada 1s a função exibeAlgo irá executar    
+            // Não colocamos os parênteses da função no parametro, pois quando o utilizamos o () após o nome da função ele EXECUTA a função. Para REFERENCIAR (passar o escopo para outro local), colocamos sem parênteses
+
+
+            // Um timeOut executa apenas uma vez com o delay desejado
+            
+            function exibeTimeOut(){
+                console.log('Eu executei apenas uma vez após 5s');
+            }
+
+            setTimeout(exibeTimeOut, 5000); // Irá esperar 5s para executar o conteúdo da função
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>M01 - A11 | Desafio | Curso JavaScript | Starter cursos</title>
+    </head>
+    <body>
+
+        
+        <script>
+            
+
+            // Exercício 01
+            
+            console.log("Exercício 01");
+
+            var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+            };
+
+            console.log(`O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua ${endereco.rua} com nº ${endereco.numero}`);
+            console.log("");
+
+
+            // Exercício 02
+
+            console.log("Exercício 02");
+            
+            function pares(x, y) {
+                for (let i = x; i < y; i++) {
+                    if (x % 2 == 0) {
+                       console.log(x); 
+                    }                  
+                }     
+            }
+
+            console.log(pares(32, 321));
+            console.log("");
+
+
+            // Exercício 03
+            
+            console.log("Exercício 03");
+
+            function temHabilidade(skills) {
+                var habilidade = skills.indexOf("Javascript",0);
+                return (habilidade != -1) ? true : false;
+            
+            }
+
+            var skills = ["Javascript", "ReactJS", "React Native"];
+  
+            console.log(temHabilidade(skills));
+            console.log("");
+
+
+            // Exercício 04
+
+            console.log("Exercício 04");
+
+            function experiencia(anos) {
+                if ((anos >= 0) && (anos <= 1)){
+                    return "Iniciante";
+                } else if ((anos > 1) && (anos <= 3)) {
+                    return "Intermediário";
+                } else if ((anos > 3) && (anos <= 6)) {
+                    return "Avançado";
+                } else {
+                    return "Jedi Master";
+                }                    
+            }
+
+            var anosEstudo = 7;
+            console.log(experiencia(anosEstudo));        
+
+            console.log("");
+
+
+            // Exercício 05
+
+            console.log("Exercício 05");          
+            
+            var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+            ];
+                                       
+    
+            function nomesHabilidades(){
+                for (var i = 0; i < usuarios.length; i++) {
+                    console.log("O "+usuarios[i].nome+" possui as habilidades: "+usuarios[i].habilidades.join(', '))    
+                }      
+            }
+
+            console.log(nomesHabilidades());
+
+
+            
+
+        </script>
+    </body>
+</html>

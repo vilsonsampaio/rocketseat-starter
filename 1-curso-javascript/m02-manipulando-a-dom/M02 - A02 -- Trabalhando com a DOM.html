@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta charset="URF-8">
+        <title>M02 - A02 | Trabalhando com a DOM | Curso JavaScript | Starter cursos</title>
+    </head>
+    <body>
+        <div id = "app">
+            <input type="text" name="nome" id="nome" class="nome"/>
+            <input type="text" name="nome" id="nome2"/>
+            <input type="text" name="querySelector"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        
+
+        <script>
+            
+
+            // Referenciando elementos a partir do ID
+            var inputElementID = document.getElementById('nome');
+            console.log("A partir do ID: ");
+            console.log(inputElementID)
+            
+            // Referenciando elementos a partir do nome (<input/>)
+                // Todos os Inputs
+                var inputElementName = document.getElementsByTagName('input');
+                console.log("A partir do nome (todos): ")
+                console.log(inputElementName)
+
+                // Um input específico (0)
+                inputElementName = document.getElementsByTagName('input')[0];
+                console.log("A partir do nome (um): ")
+                console.log(inputElementName)
+
+            // Referenciando elementos a partir da classe 
+                // Todos os Inputs
+                var inputElementClass = document.getElementsByClassName('nome');
+                console.log("A partir da classe (todos): ")
+                console.log(inputElementClass)
+
+                // Um input específico (0)
+                inputElementClassName = document.getElementsByClassName('nome')[0];
+                console.log("A partir do nome (um): ")
+                console.log(inputElementClassName)
+            
+            // Uma forma mais dinâmica de fazer tudo isso
+            // o querySelector é uma forma de buscar os elementos na DOM, permitindo percorrer toda ela até encontrar o elemento
+            
+
+            // procurando pelo input a partir da localização (dentro do body e de uma div#app)
+            var inputElement = document.querySelector('body div#app input')  // pode usar apenas o div#app input, pois o body sempre vai estar por fora
+            
+            console.log("A partir do querySelector (localização): ")
+            console.log(inputElement)
+
+            // procurando pelo input a partir do nome
+            inputElement = document.querySelector('input[name=nome]')  // [] referencia uma propriedade do elemento
+            
+            console.log("A partir do querySelector (nome): ")
+            console.log(inputElement)
+
+            // procurando pelo input 
+                // um
+                inputElement = document.querySelector('input')  // o primeiro input que encontrar
+            
+                console.log("A partir do querySelector (input - o primeiro): ")
+                console.log(inputElement)
+
+                // todos
+                inputElement = document.querySelectorAll('input')  // todos os inputs
+            
+                console.log("A partir do querySelector (input - todos): ")
+                console.log(inputElement)
+
+            // Colocando a funcionalidade do botão da aula passada no JS
+            var btnElement = document.querySelector('button.botao')  // O . serve para procurar a classe (.botao)
+            btnElement.onclick = function(){
+                alert('Botão clicado');
+
+                // Mostrando em tela o texto que ele escreveu
+                var inputElementTxt = document.querySelector('input[name=querySelector]');
+                var text = inputElementTxt.value;  // Recuperando o valor escrito no input
+
+                alert(text);
+            }
+
+            
+
+
+        </script>
+    </body>
+</html>

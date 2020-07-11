@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>M01 - A03 | Variáveis e dados | Curso JavaScript | Starter cursos</title>
+    </head>
+    <body>
+
+        
+        <script>
+            
+            
+            var nome = "Diego";        // String
+            console.log(nome);         // Imprime o nome  
+
+            var idade = 23;            // inteiro
+            console.log(idade);        // Imprime a idade
+
+            var peso = 80;             // float
+            console.log(peso);        // Imprime o peso
+
+            var humano = true;         // boolean
+            console.log(humano);       // Imprime se é humano ou não
+
+            var alunos = ['Diego', 'Gabriel', 'Lucas']; // Vetor
+            console.log(alunos);       // Imprime todos os nomes dos alunos guardados nesse vetos 
+            console.log(alunos[1])     // Imprime o aluno que está na posição 2 (Gabriel, nesse caso)
+
+            var aluno = {               // Objeto
+                nome: 'Diego',
+                idade: 23,
+                peso: 80.5,
+                humano: true
+            }; 
+            console.log(aluno.nome);    // Imprime o nome do aluno
+            console.log(aluno.peso);    // Imprime o peso do aluno
+
+            aluno = {                   
+                nome: alunos[2],        // Mostrando que conseguimos reutilizar as variáveis anteriores nas definidas posteriormente
+                idade: 23,
+                peso: 80.5,
+                humano: true
+            }; 
+            console.log(aluno.nome);    // Imprime o nome do aluno guardado no vetor alunos da posição 2 (Lucas, nesse caso);
+
+
+        </script>
+    </body>
+</html>

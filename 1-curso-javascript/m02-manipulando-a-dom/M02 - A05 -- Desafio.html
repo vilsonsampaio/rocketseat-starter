@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>M02 - A05 | Desafio | Curso JavaScript | Starter cursos</title>
+</head>
+
+<body>
+    
+    <button>Botão</button>
+    <div style="display: flex;" id="content">
+
+    </div>
+
+
+    <script>
+        
+        // Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve aparecer na tela.
+
+        // Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function criarQuadrado() {
+            var div = document.createElement('div');
+            div.classList.add('quadrado')
+            div.setAttribute("style", "width: 100px; height: 100px; background-color: red; margin: 5px");
+            div.setAttribute('onmouseover', 'event.target.style.backgroundColor = getRandomColor()');
+            document.querySelector('#content').appendChild(div);
+        }
+
+        document.querySelector('button').addEventListener('click', criarQuadrado)
+
+        
+
+       
+        
+        
+
+    
+        // A partir do seguinte vetor:
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        /*
+            Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+            ● Diego
+            ● Gabriel
+            ● Lucas
+        */
+
+
+        const ul = document.createElement('ul');
+
+        nomes.forEach(nome => {
+            const li = document.createElement('li');
+            li.innerText = nome;
+            ul.appendChild(li);
+        })
+        document.body.appendChild(ul);
+
+
+
+        /*
+        Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+        Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+        */
+
+        const input = document.createElement('input');
+        input.setAttribute('type', 'text');
+        input.setAttribute('name', 'nome');
+        document.body.appendChild(input);
+
+        const button = document.createElement('button');
+        button.setAttribute('onClick', 'adicionar()');
+        button.innerText = 'Adicionar';
+        document.body.appendChild(button);
+
+        function adicionar() {
+            const li = document.createElement('li');
+            li.innerText = input.value;
+            ul.appendChild(li);
+            input.value = ''
+        }
+    </script>
+</body>
+
+</html>

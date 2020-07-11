@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>M02 - A01 | Eventos inline | Curso JavaScript | Starter cursos</title>
+    </head>
+    <body>
+        <div id = "app">
+            <button onclick="mostraAlertaClick()">Botão 01</button>
+            <button onmouseover="mostraAlertaMouse()">Botão 02</button>
+            <input onkeydown="mostraAlertaApertar()"/>
+        </div>
+        
+
+        <script>
+            // A DOM é a árvore de elementos dentro do HTML, isto é, composta por todos os elementos dispostos em tela 
+                // Ex.: Manipular quando um botão é clicado, quando é passado o mouse por cima
+        
+            function mostraAlertaClick() {        // Função dispara quando o botão for clicado
+                alert('Botão foi clicado');
+            }
+
+            function mostraAlertaMouse() {        // Função dispara quando o mouse passar em cima do botão
+                alert('Foi passado o mouse encima do botão');
+            }
+
+            function mostraAlertaApertar() {        // Função dispara quando apertar uma tecla do teclado
+                alert('Você apertou uma tecla');
+            }
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 02 - Skylab</title>
+</head>
+
+<body>
+  <button>Criar quadrado</button>
+
+  <input type="text" name="nome">
+  <button onClick="adicionar()">Adicionar</button>
+  <script>
+    // Exercício 01
+    function createElement() {
+      var quadrado = document.createElement('div');
+      quadrado.style.margin = '5px'
+      quadrado.style.width = '100px';
+      quadrado.style.height = '100px';
+      quadrado.style.background = 'red';
+      document.body.appendChild(quadrado);
+
+
+      // Exercício 02
+      document.querySelectorAll('div').forEach(div => {
+        div.addEventListener('mouseover', changeColor)
+      })
+    }
+
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function changeColor(event) {
+      event.currentTarget.style.background = getRandomColor();
+    }
+
+    document.querySelector('button').addEventListener('click', createElement);
+
+
+
+    // Exercício 03
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    var ul = document.createElement('ul');
+
+    for (const nome of nomes) {
+      var li = document.createElement('li');
+      li.innerText = nome;
+      ul.appendChild(li)
+    }
+
+    document.body.appendChild(ul);
+
+
+
+    // Exercício 04
+    function adicionar() {
+      var liInput = document.createElement('li');
+      liInput.innerText = document.querySelector('input').value;
+      ul.appendChild(liInput);
+      document.querySelector('input').value = ''
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

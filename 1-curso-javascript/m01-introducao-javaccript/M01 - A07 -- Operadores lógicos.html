@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>M01 - A07 | Operadores lógicos | Curso JavaScript | Starter cursos</title>
+    </head>
+    <body>
+
+        
+        <script>
+           
+
+            // AND (&&)
+            var sexoAND = 'M', idadeAND = 23;
+
+            if ((sexoAND === 'M') && (idadeAND >= 18)) {  // TODAS as condições
+                console.log('Ok');
+            }
+
+            // OR (||)
+            var sexoOR = 'M', idadeOR = 10;
+
+            if ((sexo === 'M') || (idade >= 18)) {  // PELO MENOS UMA das condições
+                console.log('Ok');
+            }
+
+            // NOT
+            var sexoNOT = 'M', idadeNOT = 23;
+
+            if (sexo !== 'M') {     // Se for diferente de M
+                console.log('Ok');
+            }
+
+            // ARMAZENANDO VALOR DAS CONDIÇÕES EM VARIÁVEIS (AMBAS OPÇÕES SERVEM)
+                // OPÇÃO 01
+                var sexo = 'M', maculino;
+
+                if (sexo === 'M') {
+                    masculino = true;
+                } else {
+                    masculino = false;
+                }
+
+                console.log(masculino);
+
+
+                // OPÇÃO 02
+                var masculino = (sexo === 'M');
+                
+                console.log(masculino);
+
+                
+        </script>
+    </body>
+</html>
